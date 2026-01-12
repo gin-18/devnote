@@ -3,16 +3,16 @@
 layout: home
 
 hero:
-  name: "My Awesome Project"
-  text: "A VitePress Site"
-  tagline: My great project tagline
+  name: "DevNote"
+  text: "代码记忆，技术日志"
+  tagline: 学习的能力永不褪色
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: 学习笔记
+      link: /study-note/git/git-stage/git-stage
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: 工作笔记
+      link: /work-note/rebue-component/rebue-form/rebue-form
 
 features:
   - title: Feature A
