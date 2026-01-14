@@ -55,6 +55,15 @@ export default defineConfig({
           ],
         },
         {
+          text: 'Docker',
+          collapsed: true,
+          items: [
+            { text: '镜像的基本使用', link: '/study-note/docker/docker-image/docker-image' },
+            { text: '容器的基本使用', link: '/study-note/docker/docker-container/docker-container' },
+            { text: '仓库的基本使用', link: '/study-note/docker/docker-registry/docker-registry' }
+          ],
+        },
+        {
           text: 'Coding',
           collapsed: true,
           items: [{ text: 'todo comment 代码标签', link: '/study-note/coding/todo-comment/todo-comment' }],
