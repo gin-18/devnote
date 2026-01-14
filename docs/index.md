@@ -15,11 +15,20 @@ hero:
       link: /work-note/rebue-component/rebue-form/rebue-form
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - icon:
+      src: /home-page-icon/git.svg
+    title: Git
+    details: 重要的本版控制工具，开发者必备技能
+    link: /study-note/git/git-stage/git-stage
+  - icon:
+      src: /home-page-icon/windows.svg
+    title: Windows
+    details: 常用 Windows 下的开发工具配置
+    link: /study-note/windows/windows-terminal/windows-terminal
+  - icon:
+      src: /home-page-icon/browser.svg
+    title: 前端
+    details: 前端技术的相关笔记
+    link: /study-note/windows/windows-terminal/windows-terminal
 ---
 
