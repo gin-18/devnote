@@ -46,7 +46,7 @@ CONTAINER ID   IMAGE                               COMMAND                  CREA
 
 **`-d` 参数**
 
-我们先只使用 `-d` 参数简单地运行 `nginx:alpine` 容器
+我们先只使用 `-d` 参数简单地运行 nginx:alpine 容器
 
 ```sh
 # 后台运行 nginx:alpine 容器
@@ -63,9 +63,70 @@ a9282fd492e4   nginx:alpine   "/docker-entrypoint.…"   5 seconds ago   Up 3 se
 
 这是因为容器环境完全与宿主机隔离，我们使用的 `docker run -d nginx:alpine` 命令并没有将容器内的80端口映射给宿主机，所以我们现在是访问不到 nginx 容器中的应用的
 
+TODO: video here
+
 **`-p` 参数** 
 
+使用 `-p` 参数可以显式地指定映射到宿主机上的端口号
 
+例如：将 nginx:alpine 容器内的 80 端口映射到宿主机上的 8080 端口
+
+```sh
+docker run -d -p 8080:80 nginx:alpine
+```
+
+查看容器可以看到容器的 `PORTS` 列显示了具体的端口映射
+
+```
+CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS         PORTS                                   NAMES
+b87bbbe3084c   nginx:alpine   "/docker-entrypoint.…"   7 seconds ago   Up 6 seconds   0.0.0.0:8080->80/tcp, :::8080->80/tcp   beautiful_bhabha
+```
+
+这时，我们通过 `宿主机IP:8080` 就可以访问到 nginx 容器中的应用了
+
+TODO: video here
+
+**`-P` 参数**
+
+使用 `-P` 参数可以将容器内的所有使用的端口随机的映射到宿主机上
+
+例如：将 nginx:alpine 容器内的 80 端口随机的映射到宿主机上的某个端口
+
+```sh
+docker run -d -P nginx:alpine
+```
+
+查看容器可以看到我们并没有指定映射的端口，而是 docker 使用了随机的端口映射了 nginx 容器的 80 端口
+
+```
+CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS         PORTS                                     NAMES
+a3e7bc72e65d   nginx:alpine   "/docker-entrypoint.…"   6 seconds ago   Up 5 seconds   0.0.0.0:32768->80/tcp, :::32768->80/tcp   focused_torvalds
+```
+
+**`--name` 参数**
+
+使用 `--name` 可以为容器指定一个名称
+
+其实从上面的命令运行结果可以看到即使我们没有使用 `--name` 参数指定容器的名称， docker 也会随机的分配一个名称给容器
+
+```sh
+docker run -d -p 80:80 --name my-nginx nginx:alpine 
+```
+
+查看容器可以看到 `NAMES` 一列显示的就是我们指定的容器名称
+
+```
+CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS        PORTS                               NAMES
+15323a6f030c   nginx:alpine   "/docker-entrypoint.…"   2 seconds ago   Up 1 second   0.0.0.0:80->80/tcp, :::80->80/tcp   my-nginx
+```
+
+**`-it` 参数**
+
+`-i` 和 `-t` 参数一般连用可以写成 `-it`，使用这两个参数可以使得我们以交互的方式进入容器内部
+
+```sh
+docker run -it -p 80:80 --name my-nginx nginx:alpine
+```
 
 ## 创建容器
 
