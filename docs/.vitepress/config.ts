@@ -45,6 +45,11 @@ export default defineConfig({
           ],
         },
         {
+          text: 'SSH',
+          collapsed: true,
+          items: [{ text: 'ssh 基本使用', link: '/study-note/ssh/ssh' }],
+        },
+        {
           text: 'Windows',
           collapsed: true,
           items: [
@@ -72,11 +77,6 @@ export default defineConfig({
           text: 'Markdown',
           collapsed: true,
           items: [{ text: 'markdown 基本语法', link: '/study-note/markdown/markdown' }],
-        },
-        {
-          text: 'SSH',
-          collapsed: true,
-          items: [{ text: 'ssh 基本使用', link: '/study-note/ssh/ssh' }],
         },
         {
           text: 'v2ray',
