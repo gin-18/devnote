@@ -2,7 +2,7 @@
 
 ## 列出容器
 
-使用下面的命令可以列出设备上的容器
+使用 `docker ps` 命令可以列出设备上的容器
 
 ```sh
 # 列出正在运行的容器
@@ -63,7 +63,9 @@ a9282fd492e4   nginx:alpine   "/docker-entrypoint.…"   5 seconds ago   Up 3 se
 
 这是因为容器环境完全与宿主机隔离，我们使用的 `docker run -d nginx:alpine` 命令并没有将容器内的80端口映射给宿主机，所以我们现在是访问不到 nginx 容器中的应用的
 
-TODO: video here
+<video height="100%" controls>
+  <source src="./assets/docker-d-run.mp4" type="video/mp4"></source>
+</video>
 
 **`-p` 参数** 
 
@@ -84,7 +86,9 @@ b87bbbe3084c   nginx:alpine   "/docker-entrypoint.…"   7 seconds ago   Up 6 se
 
 这时，我们通过 `宿主机IP:8080` 就可以访问到 nginx 容器中的应用了
 
-TODO: video here
+<video height="100%" controls>
+  <source src="./assets/docker-p-run.mp4" type="video/mp4"></source>
+</video>
 
 **`-P` 参数**
 
@@ -102,6 +106,10 @@ docker run -d -P nginx:alpine
 CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS         PORTS                                     NAMES
 a3e7bc72e65d   nginx:alpine   "/docker-entrypoint.…"   6 seconds ago   Up 5 seconds   0.0.0.0:32768->80/tcp, :::32768->80/tcp   focused_torvalds
 ```
+
+<video height="100%" controls>
+  <source src="./assets/docker-shift-p-run.mp4" type="video/mp4"></source>
+</video>
 
 **`--name` 参数**
 
@@ -124,9 +132,63 @@ CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS   
 
 `-i` 和 `-t` 参数一般连用可以写成 `-it`，使用这两个参数可以使得我们以交互的方式进入容器内部
 
+下面会运行一个 ubuntu 容器作为演示
+
 ```sh
-docker run -it -p 80:80 --name my-nginx nginx:alpine
+# 最后的 /bin/sh 是指定需要和我们交互的 shell，Linux 中常见的 shell 有 sh，bash，zsh
+# 我们一般指定 /bin/sh 就可以
+docker run -it ubuntu /bin/sh
 ```
+
+其实容器内部就是一个小型的 Linux，在进入容器内部后，我们可以像操作 Linux 一样在容器内部进行操作
+
+<video height="100%" controls>
+  <source src="./assets/docker-it-run.mp4" type="video/mp4"></source>
+</video>
+
+**`-v` 参数**
+
+`-v` 参数用于挂载容器内的目录或文件到宿主机上， docker 称为容器数据卷
+
+我们知道容器环境与宿主机是隔离的，容器内的数据我们在宿主机是无法直接访问的，而且容器内产生了重要的数据，在容器销毁后就会丢失
+
+使用数据卷就可以将容器内的重要数据挂在到宿主机上，在宿主机上实现数据的持久化，并且容器内的数据更新也会马上映射到宿主机的容器卷上，修改了宿主机上容器卷的内容也会马上映射到容器内部
+
+语法如下
+
+```sh
+# 使用多个 -v 参数可以创建多个容器卷
+# /path/to/container 为宿主机上的绝对路径，/path/to/container 为容器内的绝对路径，两个路径之间需要使用 : 连接
+docker run -v /path/to/host/01:/path/to/container/01 -v /path/to/host/02:/path/to/container/02 <image_name>
+```
+
+下面使用 `-v` 参数将 nginx 容器内的重要目录挂在到宿主机上
+
+nginx 服务中有几个重要的目录或文件
+
+* `/usr/share/nginx/html`：nginx 默认渲染的首页目录
+
+* `/var/log/nginx`：nginx 的日志目录
+
+```sh
+docker run -d -p 80:80 --name my-nginx \
+-v /root/docker/nginx/html:/usr/share/nginx/html  \
+-v /root/docker/nginx/logs:/var/log/nginx \
+nginx:alpine
+```
+
+因为直接挂在了宿主机的空白目录，导致 nginx 容器中的默认首页目录被宿主机的空白目录替换，这样 nginx 服务就没有渲染的首页
+
+我们可以直接修改宿主机上的容器卷中的 nginx 默认首页目录，已验证宿主机和容器之间的数据是否是同步的
+
+```sh
+# 直接将页面内容重定向到 nginx 首页文件
+echo '<h1>Hello, this is from host</h1>' > /root/docker/nginx/html/index.html
+```
+
+<video height="100%" controls>
+  <source src="./assets/docker-v-run.mp4" type="video/mp4"></source>
+</video>
 
 ## 创建容器
 
@@ -156,7 +218,7 @@ ed8a7ba1f71e   nginx:alpine                        "/docker-entrypoint.…"   20
 
 ## 停止容器
 
-使用下面的命令可以停止正在运行的容器
+使用 `docker stop` 命令可以停止正在运行的容器
 
 ```sh
 # 可以指定容器 ID 或容器名称
@@ -171,7 +233,7 @@ docker stop my-nginx
 
 ## 启动容器
 
-使用下面的命令可以启动停止运行的容器
+使用 `docker start` 命令可以启动停止运行的容器
 
 ```sh
 docker start <container_id>/<container_name>
@@ -179,7 +241,7 @@ docker start <container_id>/<container_name>
 
 ## 重启容器
 
-使用下面的命令可以重新启动容器
+使用 `docker restart` 命令可以重新启动容器
 
 ```sh
 docker restart <container_id>/<container_name>
@@ -187,7 +249,7 @@ docker restart <container_id>/<container_name>
 
 ## 重命名容器
 
-使用下面的命令可以重命名容器
+使用 `docker rename` 命令可以重命名容器
 
 ```sh
 docker rename <old_container_name> <new_container_name>
@@ -195,3 +257,44 @@ docker rename <old_container_name> <new_container_name>
 # 例如：将 my-nginx 重命名为 gin-nginx
 docker rename my-nginx gin-nginx
 ```
+
+## 容器与宿主机之间的复制
+
+使用 `docker cp` 命令可以将容器内的文件或目录复制到宿主机上，也可以将宿主机上的文件或目录复制到容器内
+
+```sh
+# 将宿主机上的文件或目录复制到容器内
+docker cp /path/to/host <container_id>:/path/to/container
+
+# 将容器内的文件或目录复制到宿主机上
+docker cp <container_id>:/path/to/container /path/to/host
+```
+
+例如：将 nginx 容器内的 `/var/log/nginx` 目录复制到宿主机上的 `/root/nginx/log` 目录下
+
+```sh
+# 创建 /root/nginx/log
+mkdir -p /root/nginx/log
+
+# 将容器 ID 为 f196 的 /var/log/nginx 目录复制到 /root/nginx/log 目录下
+docker cp f196:/var/log/nginx /root/nginx/log
+```
+
+<video height="100%" controls>
+  <source src="./assets/docker-cp.mp4" type="video/mp4"></source>
+</video>
+
+## 运行容器命令
+
+使用 `docker exec` 可以直接执行一个容器内的命令
+
+一般常用这个命令进入正在运行的容器
+
+```sh
+# 进入指定容器 ID 或容器名称的内部
+docker exec -it <container_id>/<container_name> /bin/sh
+```
+
+<video height="100%" controls>
+  <source src="./assets/docker-exec.mp4" type="video/mp4"></source>
+</video>
