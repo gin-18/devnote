@@ -2,7 +2,7 @@
 
 ## 搜索镜像
 
-使用下面的命令可以搜索 Docker Hub 上的镜像
+使用 `docker search` 命令可以搜索 Docker Hub 上的镜像
 
 ```sh
 # 根据镜像名称搜索
@@ -35,7 +35,7 @@ bitnami/nginx                            Bitnami Secure Image for nginx         
 
 ## 列出镜像
 
-使用下面的命令可以列出设备上的 docker 镜像
+使用 `docker images` 命令可以列出设备上的 docker 镜像
 
 ```sh
 docker images
@@ -43,7 +43,7 @@ docker images
 
 ## 拉取镜像
 
-使用下面的命令可以从 docker 仓库中拉取镜像
+使用 `docker pull` 命令可以从 docker 仓库中拉取镜像
 
 ```sh
 # image_name 为镜像的名称, tag 为镜像的标签, 如果不写 tag 默认会使用 latest 标签
@@ -52,7 +52,7 @@ docker pull <image_name:tag>
 
 ## 删除镜像
 
-使用下面的命令可以删除指定的镜像
+使用 `docker rmi` 命令可以删除指定的镜像
 
 ```sh
 # 根据镜像 ID 删除镜像
@@ -74,7 +74,7 @@ docker rmi -force <image_id>
 
 * `PATH`：其实就是镜像名称，这一部分只能包含 `小写字母`, `数字` 和 `分隔符号(-)`
 
-使用下面的命令可以为一个镜像添加标签
+使用 `docker tag` 命令可以为一个镜像添加标签
 
 ```sh
 # source_image 为源镜像，就是我们要添加标签的镜像
@@ -91,15 +91,20 @@ docker tag nginx 192.168.1.11:5000/nginx:v1
 
 ## 推送镜像
 
+使用 `docker push` 可以将本地镜像推送至 docker 仓库
+
 在为镜像添加标签后，我们可以使用下面的命令将镜像推送至 docker 仓库中
 
 例如：推送上面的 `192.168.1.11:5000/nginx:v1` 镜像
 
 ```sh
+# 将本地 nginx:v1 推送至 192.168.1.11:5000 仓库中
 docker push 192.168.1.11:5000/nginx:v1
 ```
 
 ## 构建镜像
+
+使用 `docker build` 命令可以构建 docker 镜像
 
 构建镜像需要依赖 `Dockerfile` 文件，`Dockerfile` 的内容会单独写在一篇笔记里面
 
