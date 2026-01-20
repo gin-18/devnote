@@ -2,7 +2,7 @@
 
 微软文档: https://learn.microsoft.com/zh-cn/windows/wsl/
 
-<p style="color: yellow;">借助 WSL 我们可以在 Windows 上运行 Linux 环境, 微软官方也建议使用 WSL 作为 Windows 下 Docker 的后端服务</p>
+借助 WSL 我们可以在 Windows 上运行 Linux 环境, 微软官方也建议使用 WSL 作为 Windows 下 Docker 的后端服务
 
 ## WSL 的版本
 
@@ -67,7 +67,7 @@ wsl --list --verbose
 
 下面的命令会列出可安装的 Linux 发行版, 以方便我们选择对应的发行版进行安装
 
-<p style="color: yellow;">这一步可能遇到墙, 可以把代理或梯子打开, 包括安装的时候也可能遇到, 也建议在安装发行版的时候走代理</p>
+这一步可能遇到墙, 可以把代理或梯子打开, 包括安装的时候也可能遇到, 也建议在安装发行版的时候走代理
 
 ```pwsh
 wsl --list --online
@@ -116,7 +116,7 @@ SUSE-Linux-Enterprise-15-SP6    SUSE Linux Enterprise 15 SP6
 
 3. Arch Linux -- 因为这是我在用的发行版, 23333, [Arch Wiki](https://wiki.archlinux.org/title/Main_page) 也相当丰富
 
-<p style="color: yellow;">ps: 可以先安装 <code>archlinux</code>, 因为在下面安装 <code>docker</code>的内容中, 使用的是 <code>archlinux</code>作为演示; 原因是各个发行版的默认软件源访问都非常慢, 一般都需要更换为国内的镜像源, 在给其他发行版更换国内镜像源的时候, 都没有成功, 可能也是我不熟悉其他发行版, 所以我会使用 <code>archlinux</code> 来安装 <code>docker</code></p>
+ps: 可以先安装 `archlinux`, 因为在下面安装 `docker` 的内容中, 使用的是 `archlinux` 作为演示; 原因是各个发行版的默认软件源访问都非常慢, 一般都需要更换为国内的镜像源, 在给其他发行版更换国内镜像源的时候, 都没有成功, 可能也是我不熟悉其他发行版, 所以我会使用 `archlinux` 来安装 `docker`
 
 **安装目录的规划**
 
