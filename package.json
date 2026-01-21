@@ -19,6 +19,7 @@
     "vue": "^3.5.26"
   },
   "dependencies": {
-    "@catppuccin/vitepress": "^0.1.2"
+    "@catppuccin/vitepress": "^0.1.2",
+    "@vercel/analytics": "^1.6.1"
   }
 }
