@@ -60,6 +60,13 @@ export default defineConfig({
           ],
         },
         {
+          text: '闲聊 Web 开发',
+          collapsed: true,
+          items: [
+            { text: '前后端分离', link: '/study-note/web-dev/separation-of-front-back/separation-of-front-back' },
+          ],
+        },
+        {
           text: 'Docker',
           collapsed: true,
           items: [
