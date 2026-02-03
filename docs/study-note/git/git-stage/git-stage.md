@@ -22,13 +22,13 @@ hunks 指的是代码差异的补丁块, 当我们对文件进行更改后, git 
 
 在工作区面板按下 <kbd>a</kbd> 键可以暂存所有文件的 hunks, 再次按下 <kbd>a</kbd> 键可以取消所有暂存
 
-<video autoplay controls>
+<video controls>
     <source src="./assets/git-stage-all.webm" type="video/webm"></source>
 </video>
 
 如果我们只想暂存某些文件的 hunks, 只需要在对应的文件上按下 <kbd>Space</kbd> 键即可, 再次按下 <kbd>Space</kbd> 键可以取消暂存
 
-<video autoplay controls>
+<video controls>
     <source src="./assets/git-stage-one.webm" type="video/webm"></source>
 </video>
 
@@ -66,7 +66,7 @@ index ce2b3df..e238ac8 100644
 | <kbd>Down</kbd>  | 高亮下一个 hunk                                                                |
 | <kbd>Space</kbd> | 暂存/取消当前 hunk                                                             |
 
-<video autoplay controls>
+<video controls>
     <source src="./assets/git-stage-hunk.webm" type="video/webm"></source>
 </video>
 
@@ -80,18 +80,18 @@ index ce2b3df..e238ac8 100644
 
 **放弃一个文件的所有更改**
 
-<video autoplay controls>
+<video controls>
     <source src="./assets/git-stage-discard-file.webm" type="video/webm"></source>
 </video>
 
 **放弃一个文件的未暂存更改**
 
-<video autoplay controls>
+<video controls>
     <source src="./assets/git-stage-discard-unstaged-file.webm" type="video/webm"></source>
 </video>
 
 我们也可以直接在 `stage面板` 中放弃对应的 hunk, 只需要在对应的 hunk上按下 <kbd>d</kbd> 键, lazygit 会询问我们是否放弃当前 hunk
 
-<video autoplay controls>
+<video controls>
     <source src="./assets/git-stage-discard-hunk.webm" type="video/webm"></source>
 </video>
