@@ -60,10 +60,11 @@ export default defineConfig({
           ],
         },
         {
-          text: '闲聊 Web 开发',
+          text: 'Web 杂记',
           collapsed: true,
           items: [
             { text: '前后端分离', link: '/study-note/web-dev/separation-of-front-back/separation-of-front-back' },
+            { text: '元素拖放', link: '/study-note/web-dev/element-movement/element-movement' },
           ],
         },
         {
