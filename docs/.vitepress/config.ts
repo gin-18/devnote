@@ -68,6 +68,13 @@ export default defineConfig({
           ],
         },
         {
+          text: 'Vue 工程文件',
+          collapsed: true,
+          items: [
+            { text: 'package.json 文件', link: '/study-note/web-front-end/package-json/package-json' },
+          ],
+        },
+        {
           text: 'Docker',
           collapsed: true,
           items: [
