@@ -63,6 +63,7 @@ export default defineConfig({
           text: 'Javascript',
           collapsed: true,
           items: [
+            { text: 'Math 对象', link: '/study-note/javascript/math/math' },
             { text: 'JSON 对象', link: '/study-note/javascript/json/json' },
           ],
         },
