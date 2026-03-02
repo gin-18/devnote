@@ -26,7 +26,6 @@ export default defineConfig({
 
     nav: [
       { text: '学习笔记', link: '/study-note/git/git-stage/git-stage' },
-      { text: '工作笔记', link: '/work-note/rebue-component/rebue-form/rebue-form' },
     ],
 
     sidebar: {
@@ -90,7 +89,7 @@ export default defineConfig({
           items: [
             { text: '镜像的基本使用', link: '/study-note/docker/docker-image/docker-image' },
             { text: '容器的基本使用', link: '/study-note/docker/docker-container/docker-container' },
-            { text: '仓库的基本使用', link: '/study-note/docker/docker-registry/docker-registry' }
+            { text: '仓库的基本使用', link: '/study-note/docker/docker-registry/docker-registry' },
           ],
         },
         {
@@ -107,13 +106,6 @@ export default defineConfig({
           text: 'v2ray',
           collapsed: true,
           items: [{ text: '搭建代理服务器', link: '/study-note/v2ray/v2ray' }],
-        },
-      ],
-      '/work-note/': [
-        {
-          text: 'Rebue Component',
-          collapsed: true,
-          items: [{ text: 'RebueForm', link: '/work-note/rebue-component/rebue-form/rebue-form' }],
         },
       ],
     },

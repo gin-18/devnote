@@ -10,9 +10,6 @@ hero:
     - theme: brand
       text: 学习笔记
       link: /study-note/git/git-stage/git-stage
-    - theme: alt
-      text: 工作笔记
-      link: /work-note/rebue-component/rebue-form/rebue-form
 
 features:
   - icon:
