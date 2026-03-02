@@ -4,6 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: 'DevNote',
   description: 'notes about study and work',
+  lastUpdated: true,
 
   lang: 'zh-CN',
   locales: {
@@ -17,6 +18,8 @@ export default defineConfig({
     // https://vitepress.dev/reference/default-theme-config
     logo: '/logo.png',
 
+    lastUpdatedText: '最后更新',
+
     docFooter: {
       prev: '上一篇',
       next: '下一篇',
@@ -24,9 +27,7 @@ export default defineConfig({
 
     outlineTitle: '页面内容',
 
-    nav: [
-      { text: '学习笔记', link: '/study-note/git/git-stage/git-stage' },
-    ],
+    nav: [{ text: '学习笔记', link: '/study-note/git/git-stage/git-stage' }],
 
     sidebar: {
       '/study-note/': [
@@ -71,9 +72,7 @@ export default defineConfig({
         {
           text: 'Vue 工程文件',
           collapsed: true,
-          items: [
-            { text: 'package.json 文件', link: '/study-note/web-front-end/package-json/package-json' },
-          ],
+          items: [{ text: 'package.json 文件', link: '/study-note/web-front-end/package-json/package-json' }],
         },
         {
           text: 'Web 杂记',
