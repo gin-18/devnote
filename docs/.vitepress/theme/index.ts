@@ -2,8 +2,9 @@
 import { h } from 'vue'
 import type { Theme } from 'vitepress'
 import DefaultTheme from 'vitepress/theme'
-import "@catppuccin/vitepress/theme/macchiato/blue.css"
+import '@catppuccin/vitepress/theme/macchiato/blue.css'
 import { inject } from '@vercel/analytics'
+import RecentPost from './components/recent-post/RecentPost.vue'
 // import './style.css'
 
 export default {
@@ -14,9 +15,11 @@ export default {
     })
   },
   enhanceApp({ app, router, siteData }) {
-    // ...
+    app.component('RecentPost', RecentPost)
+
+    // vercel analysis
     if (typeof window !== 'undefined') {
       inject()
     }
-  }
+  },
 } satisfies Theme
