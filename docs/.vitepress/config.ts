@@ -4,7 +4,6 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: 'DevNote',
   description: 'notes about study and work',
-  lastUpdated: true,
 
   lang: 'zh-CN',
   locales: {
@@ -17,8 +16,6 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     logo: '/logo.png',
-
-    lastUpdatedText: '最后更新',
 
     docFooter: {
       prev: '上一篇',
