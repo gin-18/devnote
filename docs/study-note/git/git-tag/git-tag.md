@@ -1,4 +1,9 @@
-# git tag(标签)
+---
+title: git tag(标签)
+lastUpdated: 2026-01-09 11:23
+---
+
+# {{ $frontmatter.title }}
 
 tag 功能可以为某一次 commit 创建一个标签, 以表示这一次 commit 的重要性
 

@@ -1,4 +1,9 @@
-# Docker image(镜像)
+---
+title: Docker image(镜像)
+lastUpdated: 2025-08-12 14:30
+---
+
+# {{ $frontmatter.title }}
 
 ## 搜索镜像
 
@@ -66,13 +71,13 @@ docker rmi -force <image_id>
 
 一个完整的镜像名称应该具备 `[HOST:[POST_NUMBER]/PATH]` 这样的格式
 
-* `HOST`： docker 仓库的主机地址，可以是`registry.docker.io` 这样的域名，也可以是 `192.168.1.11` 这样的 IP 地址，只要是正确的 docker 仓库地址就可以
+- `HOST`： docker 仓库的主机地址，可以是`registry.docker.io` 这样的域名，也可以是 `192.168.1.11` 这样的 IP 地址，只要是正确的 docker 仓库地址就可以
 
-* `POST_NUMBER`：端口号，如果 docker 仓库的主机地址存在端口号，则需要填写端口号，例如：`192.168.1.11:5000` 这样具体的 docker 仓库地址
+- `POST_NUMBER`：端口号，如果 docker 仓库的主机地址存在端口号，则需要填写端口号，例如：`192.168.1.11:5000` 这样具体的 docker 仓库地址
 
-* `/`：需要使用斜杠分隔镜像名称的各个组成部分
+- `/`：需要使用斜杠分隔镜像名称的各个组成部分
 
-* `PATH`：其实就是镜像名称，这一部分只能包含 `小写字母`, `数字` 和 `分隔符号(-)`
+- `PATH`：其实就是镜像名称，这一部分只能包含 `小写字母`, `数字` 和 `分隔符号(-)`
 
 使用 `docker tag` 命令可以为一个镜像添加标签
 
@@ -113,5 +118,5 @@ docker push 192.168.1.11:5000/nginx:v1
 ```sh
 # 使用 -t 参数指定镜像名称
 # . 最后的 . 表示上下文环境
-docker build -t <image_name:tag> . 
+docker build -t <image_name:tag> .
 ```

@@ -1,4 +1,10 @@
-# 远程仓库
+---
+title: git 远程仓库
+lastUpdated: 2026-01-11 09:24
+---
+
+# {{ $frontmatter.title }}
+
 
 在我们使用 `git remote add origin <url>` 添加一个远程仓库后, 一般会使用 `git push origin main` 向名为 `origin` 的远程仓库推送本地 `main` 分支上的所有的内容
 

@@ -1,4 +1,9 @@
-# Docker Container(容器)
+---
+title: Docker Container(容器)
+lastUpdated: 2025-07-20 10:25
+---
+
+# {{ $frontmatter.title }}
 
 ## 列出容器
 
@@ -52,6 +57,7 @@ CONTAINER ID   IMAGE                               COMMAND                  CREA
 # 后台运行 nginx:alpine 容器
 docker run -d nginx:alpine
 ```
+
 查看容器可以看到已经有 nginx 容器启动，并且容器内的端口是80
 
 ```
@@ -67,7 +73,7 @@ a9282fd492e4   nginx:alpine   "/docker-entrypoint.…"   5 seconds ago   Up 3 se
   <source src="./assets/docker-d-run.mp4" type="video/mp4"></source>
 </video>
 
-**`-p` 参数** 
+**`-p` 参数**
 
 使用 `-p` 参数可以显式地指定映射到宿主机上的端口号
 
@@ -118,7 +124,7 @@ a3e7bc72e65d   nginx:alpine   "/docker-entrypoint.…"   6 seconds ago   Up 5 se
 其实从上面的命令运行结果可以看到即使我们没有使用 `--name` 参数指定容器的名称， docker 也会随机的分配一个名称给容器
 
 ```sh
-docker run -d -p 80:80 --name my-nginx nginx:alpine 
+docker run -d -p 80:80 --name my-nginx nginx:alpine
 ```
 
 查看容器可以看到 `NAMES` 一列显示的就是我们指定的容器名称
@@ -166,9 +172,9 @@ docker run -v /path/to/host/01:/path/to/container/01 -v /path/to/host/02:/path/t
 
 nginx 服务中有几个重要的目录或文件
 
-* `/usr/share/nginx/html`：nginx 默认渲染的首页目录
+- `/usr/share/nginx/html`：nginx 默认渲染的首页目录
 
-* `/var/log/nginx`：nginx 的日志目录
+- `/var/log/nginx`：nginx 的日志目录
 
 ```sh
 docker run -d -p 80:80 --name my-nginx \

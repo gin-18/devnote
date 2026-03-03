@@ -1,4 +1,9 @@
-# 聊聊前后端分离
+---
+title: 聊聊前后端分离
+lastUpdated: 2025-09-10 15:40
+---
+
+# {{ $frontmatter.title }}
 
 ## 前后端不分离的开发模式
 
@@ -24,19 +29,19 @@ Ajax 准确的说是一种思想，其中包含了许多的技术，其技术实
 
 ```javascript
 // Step 1: 实例化 xhr 对象
-var xhr = new XMLHttpRequest();
+var xhr = new XMLHttpRequest()
 // Step 2: 设置请求方式，请求地址，是否为异步请求 (method, URL, async)
-xhr.open('GET', 'https://api.example.com/data', true);
+xhr.open('GET', 'https://api.example.com/data', true)
 // Step 3: 发送请求
-xhr.send();
+xhr.send()
 // Step 4: 监听请求结果
-xhr.onload = function() {
-    if (xhr.status >= 200 && xhr.status < 300) {
-        console.log('Success:', xhr.responseText);
-    } else {
-        console.error('Request failed');
-    }
-};
+xhr.onload = function () {
+  if (xhr.status >= 200 && xhr.status < 300) {
+    console.log('Success:', xhr.responseText)
+  } else {
+    console.error('Request failed')
+  }
+}
 ```
 
 **Fetch 发送请求**
@@ -45,10 +50,10 @@ xhr.onload = function() {
 
 ```javascript
 const result = fetch('https://api.example.com/data', {
-    method: 'GET',
-    headers: {
-        'Content-Type': 'application/json'
-    }
+  method: 'GET',
+  headers: {
+    'Content-Type': 'application/json',
+  },
 })
 ```
 
@@ -57,15 +62,15 @@ const result = fetch('https://api.example.com/data', {
 使用 `axios` 发送简单的 `GET` 请求。
 
 ```javascript
-import axios from 'axios';
+import axios from 'axios'
 
 const result = axios.get('https://api.example.com/data', {
-    params: {
-        name: 'gin',
-    },
-    headers: {
-        'Content-Type': 'application/json'
-    }
+  params: {
+    name: 'gin',
+  },
+  headers: {
+    'Content-Type': 'application/json',
+  },
 })
 ```
 
@@ -77,7 +82,7 @@ const result = axios.get('https://api.example.com/data', {
 
 真正的前后端分离应该体现在开发过程的每个环节，包括 `设计`，`开发`，`测试`，`部署`
 
-* `设计阶段`：一般包括页面的设计，前端项目的架构设计，接口的设计
+- `设计阶段`：一般包括页面的设计，前端项目的架构设计，接口的设计
 
   页面的设计一般就是原型图，前端根据原型图实现页面；
 
@@ -85,11 +90,11 @@ const result = axios.get('https://api.example.com/data', {
 
   接口设计，在前后分离的开发模式中，前后端项目通过接口的方式进行交互，接口文档在设计阶段就可以设计好，以方便前后端根据接口文档独立开发；
 
-* `开发阶段`：前端根据设计好的原型图开发页面，根据接口文档规定好的字段，请求方式发送请求，由于此时后端接口可能还没完成，不过前端需要的数据可以从 `Mock服务器` 获取，这样前端开发就不需要依赖实时的后端接口
+- `开发阶段`：前端根据设计好的原型图开发页面，根据接口文档规定好的字段，请求方式发送请求，由于此时后端接口可能还没完成，不过前端需要的数据可以从 `Mock服务器` 获取，这样前端开发就不需要依赖实时的后端接口
 
-* `测试阶段`：前端的测试主要就包括 `页面的交互`，`接口传参`，`数据展示` 等功能是否正常
+- `测试阶段`：前端的测试主要就包括 `页面的交互`，`接口传参`，`数据展示` 等功能是否正常
 
-* `部署阶段`：需要保证前后端项目可独立部署，前后端分离后，前端项目可独立打包并部署到 web 服务器上，常用的 web 服务器有 nginx
+- `部署阶段`：需要保证前后端项目可独立部署，前后端分离后，前端项目可独立打包并部署到 web 服务器上，常用的 web 服务器有 nginx
 
 前后端分离架构简单概括如下图：
 

@@ -1,4 +1,9 @@
-# Object 对象
+---
+title: Object 对象
+lastUpdated: 2026-02-18 21:28
+---
+
+# {{ $frontmatter.title }}
 
 ## Object.assign()
 
@@ -7,7 +12,7 @@
 ```js
 const target = { name: 'gin' }
 const source1 = { age: 18 }
-const source2 = { skill: ['javascript', 'linux', 'docker']}
+const source2 = { skill: ['javascript', 'linux', 'docker'] }
 
 Object.assign(target, source1, source2)
 
@@ -45,7 +50,7 @@ obj_keys // ['name', 'age']
 ```js
 const obj = { name: 'gin', age: 18 }
 
-const obj_values = Object.values(obj) 
+const obj_values = Object.values(obj)
 
 obj_values // ['gin',18]
 ```

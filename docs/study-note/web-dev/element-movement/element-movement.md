@@ -1,4 +1,9 @@
-# 元素拖放
+---
+title: 元素拖放
+lastUpdated: 2025-11-28 13:15
+---
+
+# {{ $frontmatter.title }}
 
 <script setup>
 import ElementMovement from './components/ElementMovement.vue'
@@ -18,13 +23,13 @@ viewport 指的是页面的可视区域
 
 ## e.clientX，e.clientY，e.offsetX，e.offsetY
 
-* e.clientX：鼠标相对于视口的X坐标
+- e.clientX：鼠标相对于视口的X坐标
 
-* e.clientY：鼠标相对于视口的Y坐标
+- e.clientY：鼠标相对于视口的Y坐标
 
-* e.offsetX：鼠标相对事件源元素的X坐标
+- e.offsetX：鼠标相对事件源元素的X坐标
 
-* e.offsetY：鼠标相对事件源元素的Y坐标
+- e.offsetY：鼠标相对事件源元素的Y坐标
 
 ![event info](./assets/element-info.png)
 
@@ -55,18 +60,17 @@ onMounted(() => {
 
 通过定位的方式设置子元素在父元素中的位置，只需要得到4个位置信息
 
-* 子元素可移动的最大宽度，以限制子元素不能超出父元素宽度
+- 子元素可移动的最大宽度，以限制子元素不能超出父元素宽度
 
-* 子元素可移动的最大高度，以限制子元素不能超出父元素的高度
+- 子元素可移动的最大高度，以限制子元素不能超出父元素的高度
 
-* 子元素左边缘距离父元素右边缘的距离，即子元素的左侧定位
+- 子元素左边缘距离父元素右边缘的距离，即子元素的左侧定位
 
-* 子元素上边缘距离父元素上边缘的距离，即子元素的右侧定位
+- 子元素上边缘距离父元素上边缘的距离，即子元素的右侧定位
 
 简单的代码实现
 
 ```vue
-
 <script setup lang="ts">
 import { ref, onBeforeUnmount, onMounted, nextTick } from 'vue'
 

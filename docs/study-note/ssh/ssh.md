@@ -1,4 +1,9 @@
-# ssh
+---
+title: SSH 的基本使用
+lastUpdated: 2026-01-16 12:25
+---
+
+# {{ $frontmatter.title }}
 
 SSH(Secure Shell) 是一种网络协议, 主要用于在两个计算机之间实现安全的远程登录和远程控制
 

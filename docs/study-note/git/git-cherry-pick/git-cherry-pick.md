@@ -1,4 +1,9 @@
-# cherry-pick
+---
+title: git cherry-pick
+lastUpdated: 2026-02-07 14:17
+---
+
+# {{ $frontmatter.title }}
 
 有时, 我们只想把一条分支上一个或多个 commit, 而不是整个分支上的所有 commit 都合并到另一条分支上; 例如: 在 `dev` 分支上有3个超前于 `main` 分支的 commit, 而我们只想把 `dev` 分支上最新的一个 commit, 合并到 `main` 分支上, 就可以使用 `cherry-pick` 命令
 

@@ -1,4 +1,9 @@
-# String 对象
+---
+title: String 对象
+lastUpdated: 2026-02-26 11:16
+---
+
+# {{ $frontmatter.title }}
 
 ## trim()
 

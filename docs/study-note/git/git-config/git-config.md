@@ -1,4 +1,9 @@
-# Git 配置项
+---
+title: git 配置项
+lastUpdated: 2026-01-28 15:45
+---
+
+# {{ $frontmatter.title }}
 
 ## 查看 git 配置
 

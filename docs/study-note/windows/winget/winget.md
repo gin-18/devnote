@@ -1,4 +1,9 @@
-# WinGet
+---
+title: WinGet
+lastUpdated: 2025-07-08 13:45
+---
+
+# {{ $frontmatter.title }}
 
 微软文档: https://learn.microsoft.com/zh-cn/windows/package-manager/winget/
 
@@ -22,7 +27,7 @@ winget 类似于 npm, homebrew, apt 等等这类软件包管理工具, 常用于
 
 ### search 命令
 
-`winget search <appName>` 命令用于搜索软件包, 命令会返回包含了 `appName`  的所有可用软件包
+`winget search <appName>` 命令用于搜索软件包, 命令会返回包含了 `appName` 的所有可用软件包
 
 例如, 下面的命令会搜索包含 `vscode` 的所有可用软件包
 

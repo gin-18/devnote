@@ -1,4 +1,9 @@
-# PowerShell
+---
+title: PowerShell
+lastUpdated: 2025-09-18 10:30
+---
+
+# {{ $frontmatter.title }}
 
 微软文档: https://learn.microsoft.com/zh-cn/powershell/scripting/how-to-use-docs?view=powershell-7.5
 
@@ -32,7 +37,7 @@ Install-Module -Name PSReadLine -Repository PSGallery -Force
 
 在默认的 `InLineView` 模式下, 按下 <kbd>右键头</kbd> 接受预测建议
 
-ps: 下面是在我的 Linux 下的演示, 不过是一样效果  :smile_cat:
+ps: 下面是在我的 Linux 下的演示, 不过是一样效果 :smile_cat:
 
 ![accpet_suggestion](./assets/accpet_suggestion.gif)
 

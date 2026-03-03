@@ -1,4 +1,9 @@
-# git stage(暂存)
+---
+title: git stage(暂存)
+lastUpdated: 2026-02-03 15:01
+---
+
+# {{ $frontmatter.title }}
 
 在 git 中, 有一个暂存区的概念, 在 git 所追踪的文件在被更改后, 这些更改的内容会处于 `unstage(未暂存)` 状态, 当我们使用 `git add <file_name>` 命令暂存一个文件的时候, 对于这个文件的更改就会被放入暂存区中, 只有在暂存区中的更改才能被 `commit(提交)`
 

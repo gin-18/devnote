@@ -1,4 +1,9 @@
-# Windows终端
+---
+title: Windows 终端
+lastUpdated: 2025-06-15 11:10
+---
+
+# {{ $frontmatter.title }}
 
 官方文档: https://learn.microsoft.com/zh-cn/windows/terminal/
 
@@ -6,11 +11,11 @@
 
 Windows终端的配置文件为 `setting.json`, 可以以下目录中找到:
 
-* 终端(稳定/常规版本): `%LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json`
+- 终端(稳定/常规版本): `%LOCALAPPDATA%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState\settings.json`
 
-* 终端(预览版): `%LOCALAPPDATA%\Packages\Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe\LocalState\settings.json`
+- 终端(预览版): `%LOCALAPPDATA%\Packages\Microsoft.WindowsTerminalPreview_8wekyb3d8bbwe\LocalState\settings.json`
 
-* <kbd>shift + ctrl + ,</kbd> 打开终端配置文件
+- <kbd>shift + ctrl + ,</kbd> 打开终端配置文件
 
 ## 配色方案
 

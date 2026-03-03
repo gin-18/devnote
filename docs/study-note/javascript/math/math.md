@@ -1,4 +1,9 @@
-# Math 对象
+---
+title: Math 对象
+lastUpdated: 2026-02-15 16:26
+---
+
+# {{ $frontmatter.title }}
 
 `Math` 对象提供了各种数学功能，`Math` 对象不可实例化，只提供了静态属性和静态方法
 

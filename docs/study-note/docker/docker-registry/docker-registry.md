@@ -1,4 +1,9 @@
-# Docker Registry(仓库)
+---
+title: Docker Registry(仓库)
+lastUpdated: 2025-08-25 16:20
+---
+
+# {{ $frontmatter.title }}
 
 ## 搭建私有镜像仓库
 
