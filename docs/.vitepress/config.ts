@@ -69,7 +69,10 @@ export default defineConfig({
         {
           text: 'Vue 工程文件',
           collapsed: true,
-          items: [{ text: 'package.json 文件', link: '/study-note/web-front-end/package-json/package-json' }],
+          items: [
+            { text: 'package.json 文件', link: '/study-note/web-front-end/package-json/package-json' },
+            { text: '.env 文件和环境变量', link: '/study-note/web-front-end/env/env' },
+          ],
         },
         {
           text: 'Web 杂记',
