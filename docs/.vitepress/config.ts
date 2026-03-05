@@ -22,6 +22,7 @@ export default defineConfig({
       next: '下一篇',
     },
 
+    outline: [2, 3],
     outlineTitle: '页面内容',
 
     nav: [{ text: '学习笔记', link: '/study-note/git/git-stage/git-stage' }],
