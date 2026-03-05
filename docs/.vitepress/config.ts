@@ -40,6 +40,7 @@ export default defineConfig({
             { text: 'git 标签', link: '/study-note/git/git-tag/git-tag' },
             { text: 'git 远程仓库', link: '/study-note/git/git-remote/git-remote' },
             { text: 'git 的配置项', link: '/study-note/git/git-config/git-config' },
+            { text: 'conventional-commits 提交规范', link: '/study-note/git/conventional-commits/conventional-commits' },
           ],
         },
         {
