@@ -74,6 +74,7 @@ export default defineConfig({
             { text: 'package.json 文件', link: '/study-note/web-front-end/package-json/package-json' },
             { text: '.env 文件和环境变量', link: '/study-note/web-front-end/env/env' },
             { text: 'husky', link: '/study-note/web-front-end/husky/husky' },
+            { text: 'lint-staged', link: '/study-note/web-front-end/lint-stage/lint-stage' },
           ],
         },
         {
