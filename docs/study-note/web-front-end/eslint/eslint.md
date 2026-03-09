@@ -1,6 +1,6 @@
 ---
 title: ESLint 基本使用
-lastUpdated: 2026-03-09 23:09
+lastUpdated: 2026-03-09 23:23
 ---
 
 # {{ $frontmatter.title }}
@@ -205,6 +205,16 @@ export default defineConfig([
   { ... }, // 可以在下面添加其他配置 // [!code focus]
 ]);
 ```
+
+## 编辑器插件
+
+`vscode` 类编辑器可以安装 `ESLint` 插件，以在编辑器中显示 ESLint 提示
+
+![vscode eslint plugin](./assets/vscode-eslint-plugin.png)
+
+在编辑器中触发了 ESLint 规则的情况
+
+![vscode eslint info](./assets/vscode-eslint-info.png)
 
 ## 相关链接
 
