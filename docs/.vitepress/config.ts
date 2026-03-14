@@ -70,6 +70,11 @@ export default defineConfig({
           ],
         },
         {
+          text: 'Vue 组件基础',
+          collapsed: true,
+          items: [{ text: 'Props', link: '/study-note/basic-vue-component/props/props' }],
+        },
+        {
           text: 'Vue 工程文件',
           collapsed: true,
           items: [
