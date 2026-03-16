@@ -63,6 +63,7 @@ const name = ref('gin')
 
 const changeName = () => {
   name.value = 'amber' // ✅ 只应该在父组件中修改 props
+}
 </script>
 
 <template>
