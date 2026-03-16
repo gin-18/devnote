@@ -75,6 +75,7 @@ export default defineConfig({
           items: [
             { text: 'Props', link: '/study-note/basic-vue-component/props/props' },
             { text: '事件', link: '/study-note/basic-vue-component/emits/emits' },
+            { text: '组件 v-model', link: '/study-note/basic-vue-component/v-model/v-model' },
           ],
         },
         {
