@@ -78,6 +78,7 @@ export default defineConfig({
             { text: '组件 v-model', link: '/study-note/basic-vue-component/v-model/v-model' },
             { text: '透传 Attributes', link: '/study-note/basic-vue-component/attributes/attributes' },
             { text: '依赖注入', link: '/study-note/basic-vue-component/provide-inject/provide-inject' },
+            { text: 'defineExpose', link: '/study-note/basic-vue-component/define-expose/define-expose' },
           ],
         },
         {
