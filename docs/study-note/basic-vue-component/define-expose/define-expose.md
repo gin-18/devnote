@@ -1,6 +1,6 @@
 ---
 title: Vue 组件基础 - defineExpose
-lastUpdated:
+lastUpdated: 2026-03-17 10:38
 ---
 
 # {{ $frontmatter.title }}
