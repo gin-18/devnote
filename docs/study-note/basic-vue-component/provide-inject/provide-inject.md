@@ -1,6 +1,6 @@
 ---
 title: Vue 组件基础 - 依赖注入
-lastUpdated:
+lastUpdated: 2026-03-17 09:25
 ---
 
 # {{ $frontmatter.title }}
