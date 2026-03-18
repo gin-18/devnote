@@ -101,6 +101,7 @@ export default defineConfig({
           items: [
             { text: '前后端分离', link: '/study-note/web-dev/separation-of-front-back/separation-of-front-back' },
             { text: '元素拖放', link: '/study-note/web-dev/element-movement/element-movement' },
+            { text: '简单了解 Node.js', link: '/study-note/web-dev/simple-node/simple-node' },
           ],
         },
         {
