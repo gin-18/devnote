@@ -13,7 +13,7 @@ lastUpdated: 2026-02-04 11:52
 
 在我们的仓库中有两条分支 `main` 和 `dev`, 并且 `dev` 上有一个超前于 `main` 分支的提交
 
-<video autoplay controls>
+<video controls>
     <source src="./assets/git-stash.webm" type="video/webm"></source>
 </video>
 
@@ -30,7 +30,7 @@ lastUpdated: 2026-02-04 11:52
 
 <details>
     <summary>点击展开查看详情👀</summary>
-    <video autoplay controls>
+    <video controls>
         <source src="./assets/git-stash-step-two.webm" type="video/webm"></source>
     </video>
 </details>
@@ -42,7 +42,7 @@ lastUpdated: 2026-02-04 11:52
 <details>
     <summary>点击展开查看详情👀</summary>
     <p>在第2个面板(工作区面板)上键入 <kbd>s</kbd>, 即可输入 stash 信息, 再按下 <kbd>Enter</kbd> 就可以发现 stash 信息被放在了左侧第5个面板(stash面板)显示, 在这个面板中可以操作 stash</p>
-    <video autoplay controls>
+    <video controls>
         <source src="./assets/git-stash-step-three.webm" type="video/webm"></source>
     </video>
 </details>
@@ -53,7 +53,7 @@ lastUpdated: 2026-02-04 11:52
 
 <details>
     <summary>点击展开查看详情👀</summary>
-    <video autoplay controls>
+    <video controls>
         <source src="./assets/git-stash-step-four.webm" type="video/webm"></source>
     </video>
 </details>
@@ -64,7 +64,7 @@ lastUpdated: 2026-02-04 11:52
 
 <details>
     <summary>点击展开查看详情👀</summary>
-    <video autoplay controls>
+    <video controls>
         <source src="./assets/git-stash-step-five.webm" type="video/webm"></source>
     </video>
 </details>
@@ -75,7 +75,7 @@ lastUpdated: 2026-02-04 11:52
 
 <details>
     <summary>点击展开查看详情👀</summary>
-    <video autoplay controls>
+    <video controls>
         <source src="./assets/git-stash-step-six.webm" type="video/webm"></source>
     </video>
 </details>
@@ -86,7 +86,7 @@ lastUpdated: 2026-02-04 11:52
 
 <details>
     <summary>点击展开查看详情👀</summary>
-    <video autoplay controls>
+    <video controls>
         <source src="./assets/git-stash-step-seven.webm" type="video/webm"></source>
     </video>
 </details>

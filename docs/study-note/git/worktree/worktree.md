@@ -82,7 +82,7 @@ lastUpdated: 2026-03-25 11:52
 
 视频演示：
 
-<video autoplay controls>
+<video controls>
     <source src="./assets/lazygit-create-worktree.webm" type="video/webm"></source>
 </video>
 
@@ -92,7 +92,7 @@ lastUpdated: 2026-03-25 11:52
 
 删除工作区的同时，git 会将存放该工作区的目录一同删除，但是会保留该工作区的分支
 
-<video autoplay controls>
+<video controls>
     <source src="./assets/lazygit-remove-worktree.webm" type="video/webm"></source>
 </video>
 
@@ -102,6 +102,6 @@ lastUpdated: 2026-03-25 11:52
 
 即使我们在该工作区的更改未提交(`commit`)或未贮藏(`stash`)也是可以直接切换的
 
-<video autoplay controls>
+<video controls>
     <source src="./assets/lazygit-switch-worktree.webm" type="video/webm"></source>
 </video>

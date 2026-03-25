@@ -23,7 +23,7 @@ tag 功能常用来标记发布节点, 也就是创建一个版本号(v1.0.0, v2
 
 在 `tags` 面板上, 按下 <kbd>n</kbd> 后, `lazygit` 会让我们输入 `tag name(标签名)` 和 `tag description(标签描述)`, 填入对应信息后, <kbd>Enter</kbd> 就可以创建一个 tag
 
-<video height="100%" autoplay controls>
+<video height="100%" controls>
     <source src="./assets/git-tag-new.mp4" type="video/mp4"></source>
 </video>
 
@@ -31,13 +31,13 @@ tag 功能常用来标记发布节点, 也就是创建一个版本号(v1.0.0, v2
 
 修改 `HEAD` 的指向, 只需要高亮对应的 commit 后, 再按下 <kbd>Space</kbd> 即可; 要恢复到最新的 commit, 只需要再在分支上按下 <kbd>Space</kbd> 即可
 
-<video height="100%" autoplay controls>
+<video height="100%" controls>
     <source src="./assets/git-tag-switch-commit.mp4" type="video/mp4"></source>
 </video>
 
 下面演示一下为 `initial commit` 这条 commit 创建 tag
 
-<video height="100%" autoplay controls>
+<video height="100%" controls>
     <source src="./assets/git-tag-initial-tag.mp4" type="video/mp4"></source>
 </video>
 
@@ -47,7 +47,7 @@ tag 并不会随着 commit 的推送而被推送到远端仓库, 需要单独推
 
 在 `tags` 面板上, 按下 <kbd>Shift + p</kbd> 就可以推送 tag
 
-<video height="100%" autoplay controls>
+<video height="100%" controls>
     <source src="./assets/git-tag-push.mp4" type="video/mp4"></source>
 </video>
 
@@ -55,6 +55,6 @@ tag 并不会随着 commit 的推送而被推送到远端仓库, 需要单独推
 
 在 `tags` 面板上, 按下 <kbd>d</kbd> 后在出现的选项菜单中选择对应的操作即可
 
-<video height="100%" autoplay controls>
+<video height="100%" controls>
     <source src="./assets/git-tag-delete.mp4" type="video/mp4"></source>
 </video>

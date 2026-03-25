@@ -30,7 +30,7 @@ git push
 
 而后, 我们再推送 `main` 分支的内容时, 只需要按下 <kbd>Shift + p</kbd>, `lazygit` 就会向我们设置好的上游推送, 对应的 `git` 命令就是 `git push`
 
-<video height="100%" loop autoplay controls>
+<video height="100%" controls>
     <source src="./assets/git-remote-set-upstream-main.mp4" type="video/mp4"></source>
 </video>
 
@@ -38,7 +38,7 @@ git push
 
 在 `lazygit` 的 `branch 面板` 的 `Remotes` 标签下, 按下 <kbd>n</kbd> 并在填入对应的 `remote name(远程仓库名)` 和 `remote url(远程仓库地址)` 后, <kbd>Enter</kbd> 就可以添加一个远程仓库
 
-<video height="100%" loop autoplay controls>
+<video height="100%" controls>
     <source src="./assets/git-remote-add-remote-repo.mp4" type="video/mp4"></source>
 </video>
 
@@ -60,7 +60,7 @@ git push
 
 所以, 如果我们想向不同的远程仓库推送, 只需要在 `branch 面板` 按下 <kbd>u</kbd> 选择 `Set upstream of selected branch(设置上游分支)` 后, 选择对应的远程分支即可
 
-<video height="100%" loop autoplay controls>
+<video height="100%" controls>
     <source src="./assets/git-remote-push-upstream.mp4" type="video/mp4"></source>
 </video>
 
@@ -68,7 +68,7 @@ git push
 
 <details>
     <summary>点击展开查看详情👀</summary>
-    <video height="100%" loop autoplay controls>
+    <video height="100%" controls>
         <source src="./assets/git-remote-push-upstream-step-one.mp4" type="video/mp4"></source>
     </video>
 </details>
@@ -79,7 +79,7 @@ git push
 
 <details>
     <summary>点击展开查看详情👀</summary>
-    <video height="100%" autoplay controls>
+    <video height="100%" controls>
         <source src="./assets/git-remote-push-upstream-step-two.mp4" type="video/mp4"></source>
     </video>
 </details>
@@ -90,7 +90,7 @@ git push
 
 例如, 我们要向 `upstream main` 这条远程分支推送内容, 在按下 <kbd>:</kbd> 后输入 `git push upstream main` 就可以推送了
 
-<video height="100%" loop autoplay controls>
+<video height="100%" controls>
     <source src="./assets/git-remote-shell-push.mp4" type="video/mp4"></source>
 </video>
 
