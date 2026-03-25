@@ -39,6 +39,7 @@ export default defineConfig({
             { text: 'git 冲突的解决', link: '/study-note/git/git-conflict-resolve/git-conflict-resolve' },
             { text: 'git 标签', link: '/study-note/git/git-tag/git-tag' },
             { text: 'git 远程仓库', link: '/study-note/git/git-remote/git-remote' },
+            { text: 'git 工作区', link: '/study-note/git/worktree/worktree' },
             { text: 'git 的配置项', link: '/study-note/git/git-config/git-config' },
             { text: '服务器上的 git', link: '/study-note/git/server-git/server-git' },
             { text: 'conventional-commits 提交规范', link: '/study-note/git/conventional-commits/conventional-commits' },
