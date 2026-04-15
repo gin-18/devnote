@@ -1,15 +1,29 @@
 ---
 # https://vitepress.dev/reference/default-theme-home-page
 layout: home
-
-hero:
-  name: "DevNote"
-  text: "代码记忆，技术日志"
-  tagline: 学习的能力永不褪色
-  actions:
-    - theme: brand
-      text: 学习笔记
-      link: /study-note/git/git-stage/git-stage
 ---
 
-<RecentPost />
+<section class="home-page">
+  <Profile class="profile" />
+  <RecentPost class="recent-post" />
+</section>
+
+<style scope>
+.home-page {
+  display: flex;
+  gap: 8px;
+  margin-top: 64px;
+
+  .profile {
+    box-sizing: border-box;
+    flex: 1;
+    padding: 12px;
+    border-radius: 6px;
+    background: var(--vp-c-bg-soft);
+  }
+
+  .recent-post {
+    flex: 1;
+  }
+}
+</style>

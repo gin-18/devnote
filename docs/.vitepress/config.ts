@@ -63,8 +63,10 @@ export default defineConfig({
           text: 'Javascript',
           collapsed: true,
           items: [
+            { text: 'Array 对象', link: '/study-note/javascript/array/array' },
             { text: 'String 对象', link: '/study-note/javascript/string/string' },
             { text: 'Object 对象', link: '/study-note/javascript/object/object' },
+            { text: 'Date 对象', link: '/study-note/javascript/date/date' },
             { text: 'Math 对象', link: '/study-note/javascript/math/math' },
             { text: 'JSON 对象', link: '/study-note/javascript/json/json' },
           ],

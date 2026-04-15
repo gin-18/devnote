@@ -35,8 +35,10 @@ const goToUrl = (url: string) => {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    justify-content: space-between;
+    gap: 8px;
     padding-left: unset;
+    margin-bottom: unset;
 
     .list-item {
       display: flex;
